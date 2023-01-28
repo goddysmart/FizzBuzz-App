@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fizzbuzz App</title>
+    <meta name="description" content="Practice project on Jinja Templating">
+  </head>
+  <body>
+    <h1>Fizzbuzz</h1>
+    
+    <ul>
+        {% for number in number_range %}
+            {% if number % 15 == 0 %}
+                <li>Fizzbuzz</li>
+            {% elif number % 3 == 0 %}
+                <li>Fizz</li>
+            {% elif number % 5 == 0 %}
+                <li>Buzz</li>
+            {% else %}
+                <li>{{ number }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+  </body>
+</html>
